@@ -1,0 +1,25 @@
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container p-3">
+        <form #data="ngForm" method="post" (submit)="updateEmployee()" class="mt-5">
+            <div class="row mb-3">
+                <p class="col">First Name</p>
+                <input type="text" class="col" name="firstName" [(ngModel)]="employee.firstName" placeholder="Enter First Name"/>
+            </div>
+            <div class="row mb-3">
+                <p class="col">Last Name</p>
+                <input type="text" class="col" name="lastName" [(ngModel)]="employee.lastName" placeholder="Enter Last Name"/>
+            </div>
+            <div class="row mb-3">
+                <p class="col">Last Name</p>
+                <input type="number" class="col" name="salary" [(ngModel)]="employee.salary" placeholder="Enter Salary"/>
+            </div>
+            <div class="row">
+                <button type="reset" class="btn btn-primary col mx-1">Reset</button>
+                <button type="submit" class="btn btn-primary col mx-1">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
